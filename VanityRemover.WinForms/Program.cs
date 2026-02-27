@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Geeky.VanityRemover.Core;
+using System;
+using System.Globalization;
+using System.Threading;
 using System.Windows.Forms;
-using Geeky.VanityRemover.Core;
 
 namespace Geeky.VanityRemover
 {
@@ -19,7 +21,9 @@ namespace Geeky.VanityRemover
 
             // Create cleaner
             var cleaner = new Cleaner();
-            
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("pl-PL");
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("pl-PL");
+
             // Start application
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

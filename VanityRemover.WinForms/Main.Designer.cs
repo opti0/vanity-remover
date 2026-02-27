@@ -43,95 +43,80 @@
             // 
             // path
             // 
-            this.path.AccessibleDescription = "Type in the path to clean here.";
-            this.path.AccessibleName = "Path";
-            this.path.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.path, "path");
             this.path.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.path.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
-            this.errorProvider.SetIconAlignment(this.path, System.Windows.Forms.ErrorIconAlignment.BottomRight);
-            this.path.Location = new System.Drawing.Point(39, 6);
+            this.errorProvider.SetError(this.path, resources.GetString("path.Error"));
+            this.errorProvider.SetIconAlignment(this.path, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("path.IconAlignment"))));
+            this.errorProvider.SetIconPadding(this.path, ((int)(resources.GetObject("path.IconPadding"))));
             this.path.Name = "path";
-            this.path.Size = new System.Drawing.Size(175, 20);
-            this.path.TabIndex = 1;
             this.path.TextChanged += new System.EventHandler(this.PathChanged);
             // 
             // pathDialog
             // 
-            this.pathDialog.Description = "Please select the folder to clean:";
+            resources.ApplyResources(this.pathDialog, "pathDialog");
             this.pathDialog.RootFolder = System.Environment.SpecialFolder.MyComputer;
             this.pathDialog.ShowNewFolderButton = false;
             // 
             // dropZoneText
             // 
-            this.dropZoneText.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dropZoneText.AutoSize = true;
-            this.dropZoneText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.dropZoneText, "dropZoneText");
+            this.errorProvider.SetError(this.dropZoneText, resources.GetString("dropZoneText.Error"));
             this.dropZoneText.ForeColor = System.Drawing.Color.Gray;
-            this.dropZoneText.Location = new System.Drawing.Point(22, 54);
+            this.errorProvider.SetIconAlignment(this.dropZoneText, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("dropZoneText.IconAlignment"))));
+            this.errorProvider.SetIconPadding(this.dropZoneText, ((int)(resources.GetObject("dropZoneText.IconPadding"))));
             this.dropZoneText.Name = "dropZoneText";
-            this.dropZoneText.Size = new System.Drawing.Size(174, 32);
-            this.dropZoneText.TabIndex = 3;
-            this.dropZoneText.Text = "Give me a folder and\r\nthe vanity within will go away";
-            this.dropZoneText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // start
             // 
-            this.start.AccessibleDescription = "Starts the cleaning process.";
-            this.start.AccessibleName = "Start";
-            this.start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.start, "start");
             this.start.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.start.Enabled = false;
+            this.errorProvider.SetError(this.start, resources.GetString("start.Error"));
             this.start.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.errorProvider.SetIconAlignment(this.start, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("start.IconAlignment"))));
+            this.errorProvider.SetIconPadding(this.start, ((int)(resources.GetObject("start.IconPadding"))));
             this.start.Image = global::Geeky.VanityRemover.Properties.Resources.go;
-            this.start.Location = new System.Drawing.Point(187, 111);
             this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(27, 24);
-            this.start.TabIndex = 2;
             this.start.Tag = "";
             this.start.UseVisualStyleBackColor = true;
             this.start.Click += new System.EventHandler(this.StartClicked);
             // 
             // browse
             // 
-            this.browse.AccessibleDescription = "Opens up a folder browse dialog for selecting the path to clean.";
-            this.browse.AccessibleName = "Browse";
+            resources.ApplyResources(this.browse, "browse");
+            this.errorProvider.SetError(this.browse, resources.GetString("browse.Error"));
             this.browse.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.errorProvider.SetIconAlignment(this.browse, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("browse.IconAlignment"))));
+            this.errorProvider.SetIconPadding(this.browse, ((int)(resources.GetObject("browse.IconPadding"))));
             this.browse.Image = global::Geeky.VanityRemover.Properties.Resources.browse;
-            this.browse.Location = new System.Drawing.Point(6, 3);
             this.browse.Name = "browse";
-            this.browse.Size = new System.Drawing.Size(27, 24);
-            this.browse.TabIndex = 0;
             this.browse.UseVisualStyleBackColor = true;
             this.browse.Click += new System.EventHandler(this.BrowseClicked);
             // 
             // progressBar
             // 
-            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(6, 113);
+            resources.ApplyResources(this.progressBar, "progressBar");
+            this.errorProvider.SetError(this.progressBar, resources.GetString("progressBar.Error"));
+            this.errorProvider.SetIconAlignment(this.progressBar, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("progressBar.IconAlignment"))));
+            this.errorProvider.SetIconPadding(this.progressBar, ((int)(resources.GetObject("progressBar.IconPadding"))));
             this.progressBar.MarqueeAnimationSpeed = 20;
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(142, 20);
-            this.progressBar.TabIndex = 8;
             // 
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
+            resources.ApplyResources(this.errorProvider, "errorProvider");
             // 
             // cancel
             // 
-            this.cancel.AccessibleDescription = "Cancels the cleaning process.";
-            this.cancel.AccessibleName = "Cancel";
-            this.cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.cancel, "cancel");
             this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancel.Enabled = false;
+            this.errorProvider.SetError(this.cancel, resources.GetString("cancel.Error"));
             this.cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.errorProvider.SetIconAlignment(this.cancel, ((System.Windows.Forms.ErrorIconAlignment)(resources.GetObject("cancel.IconAlignment"))));
+            this.errorProvider.SetIconPadding(this.cancel, ((int)(resources.GetObject("cancel.IconPadding"))));
             this.cancel.Image = global::Geeky.VanityRemover.Properties.Resources.stop;
-            this.cancel.Location = new System.Drawing.Point(154, 111);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(27, 24);
-            this.cancel.TabIndex = 3;
             this.cancel.Tag = "";
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.CancelClicked);
@@ -139,28 +124,24 @@
             // Main
             // 
             this.AcceptButton = this.start;
+            resources.ApplyResources(this, "$this");
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancel;
-            this.ClientSize = new System.Drawing.Size(219, 141);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.start);
             this.Controls.Add(this.dropZoneText);
             this.Controls.Add(this.browse);
             this.Controls.Add(this.path);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(230, 150);
             this.Name = "Main";
-            this.Text = "Vanity remover";
             this.TopMost = true;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormIsClosing);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.SomethingDropped);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.SomethingEntered);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormIsClosing);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

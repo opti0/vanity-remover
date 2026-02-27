@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanityRemover.WinForms", "VanityRemover.WinForms\VanityRemover.WinForms.csproj", "{3CE7740E-AD7C-4C11-A88F-F1FD21FD46BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanityRemover.Core", "VanityRemover.Core\VanityRemover.Core.csproj", "{4B3AA543-F1A5-4613-BC8F-2147A0B74EE5}"
@@ -10,6 +12,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanityRemover.Console", "VanityRemover.Console\VanityRemover.Console.csproj", "{2E707491-8178-460F-A33B-52326DD327BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{18D7B6F6-9411-4383-A735-8E2A55F06022}"
+	ProjectSection(SolutionItems) = preProject
+		Changelog.txt = Changelog.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items (2)", "Solution Items (2)", "{98A59EF5-9C3F-48FE-AE20-4C77FEAD1008}"
 	ProjectSection(SolutionItems) = preProject
 		Changelog.txt = Changelog.txt
 	EndProjectSection
@@ -39,5 +46,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E78BE387-CD3B-423A-862A-3FD1DD56E587}
 	EndGlobalSection
 EndGlobal
